@@ -1,4 +1,4 @@
-package net.chiovari.javarecipes.jpa2cert.entities;
+package net.chiovari.javarecipes.jpa2cert.entities.column;
 
 import net.chiovari.javarecipes.jpa2cert.entities.JPATestUtils;
 import net.chiovari.javarecipes.jpa2cert.entities.colum.Customer;

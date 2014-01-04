@@ -2,6 +2,7 @@ package net.chiovari.javarecipes.jpa2cert.auction;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -17,8 +18,8 @@ public class AuctionUser {
     private String displayName;
     private String email;
 
-    private List<Bid> bids;
-    private List<Auction> auctions;
+    private Collection<Bid> bids;
+    private Collection<Auction> auctions;
 
     public Integer getAuctionUserID() {
         return auctionUserID;
@@ -44,7 +45,7 @@ public class AuctionUser {
         this.email = email;
     }
 
-    public List<Bid> getBids() {
+    public Collection<Bid> getBids() {
         return bids;
     }
 
@@ -52,7 +53,7 @@ public class AuctionUser {
         this.bids = bids;
     }
 
-    public List<Auction> getAuctions() {
+    public Collection<Auction> getAuctions() {
         return auctions;
     }
 

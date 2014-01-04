@@ -1,9 +1,6 @@
 package net.chiovari.javarecipes.jpa2cert.entities.field;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -13,6 +10,7 @@ import java.util.Date;
 public class FieldAccessEntity {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
     private String name;

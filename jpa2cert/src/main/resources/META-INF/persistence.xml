@@ -2,6 +2,9 @@
     <persistence-unit name ="CompanyPU" transaction-type = "RESOURCE_LOCAL">
         <non-jta-data-source>Jpa2CertDS</non-jta-data-source>
         <class>net.chiovari.javarecipes.jpa2cert.entities.colum.Customer</class>
+        <class>net.chiovari.javarecipes.jpa2cert.entities.temporal.TemporalDate</class>
+        <class>net.chiovari.javarecipes.jpa2cert.entities.temporal.TemporalTimestamp</class>
+        <class>net.chiovari.javarecipes.jpa2cert.entities.temporal.TemporalTime</class>
         <properties>
             <property name="eclipselink.logging.level.sql" value="FINE"/>
             <property name="eclipselink.logging.parameters" value="true"/>

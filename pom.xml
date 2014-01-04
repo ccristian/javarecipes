@@ -4,6 +4,9 @@
   <groupId>net.chiovari.javarecipes</groupId>
   <artifactId>javarecipes</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+    <modules>
+        <module>jpa2cert</module>
+    </modules>
+    <packaging>pom</packaging>
   <name>javarecipes</name>
 </project>
