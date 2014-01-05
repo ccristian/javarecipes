@@ -5,9 +5,14 @@
         <class>net.chiovari.javarecipes.jpa2cert.entities.temporal.TemporalDate</class>
         <class>net.chiovari.javarecipes.jpa2cert.entities.temporal.TemporalTimestamp</class>
         <class>net.chiovari.javarecipes.jpa2cert.entities.temporal.TemporalTime</class>
+        <class>net.chiovari.javarecipes.jpa2cert.entities.id.EntityWithIDIdentity</class>
+        <class>net.chiovari.javarecipes.jpa2cert.entities.id.EntityWithIDSequence</class>
+        <class>net.chiovari.javarecipes.jpa2cert.entities.id.AnotherEntityWithIDSequence</class>
+        <class>net.chiovari.javarecipes.jpa2cert.entities.id.EntityWithIdTableGen</class>
+        <class>net.chiovari.javarecipes.jpa2cert.entities.id.AnotherEntityWithIdTableGen</class>
         <properties>
-            <property name="eclipselink.logging.level.sql" value="FINE"/>
-            <property name="eclipselink.logging.parameters" value="true"/>
+            <!--property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/-->
         </properties>
     </persistence-unit>
 </persistence>

@@ -4,11 +4,11 @@ import javax.persistence.*;
 import java.util.Date;
 
 import static javax.persistence.TemporalType.TIME;
-import static javax.persistence.TemporalType.TIMESTAMP;
+
 
 /**
  * Created by cristianchiovari on 04/01/14.
- * SQL generated
+ * Sql generated for this table.
  * CREATE TABLE TEMPORALTIME (ID BIGINT NOT NULL, TIME TIME, PRIMARY KEY (ID))
  */
 

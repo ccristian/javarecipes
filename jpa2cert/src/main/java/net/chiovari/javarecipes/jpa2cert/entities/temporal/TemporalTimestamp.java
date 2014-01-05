@@ -7,7 +7,7 @@ import static javax.persistence.TemporalType.TIMESTAMP;
 
 /**
  * Created by cristianchiovari on 04/01/14.
- * SQl
+ * Sql generated for this table.
  * CREATE TABLE TEMPORALTIMESTAMP (ID BIGINT NOT NULL, TIMESTAMP TIMESTAMP, PRIMARY KEY (ID))
  */
 @Entity

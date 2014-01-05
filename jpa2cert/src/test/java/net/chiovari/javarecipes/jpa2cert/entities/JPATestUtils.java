@@ -25,22 +25,22 @@ public class JPATestUtils {
         dataSource.setUser("App");
         dataSource.setPassword("App");
 
-        //SLF4JQueryLoggingListener commonsQueryLoggingListener= new SLF4JQueryLoggingListener();
-        //commonsQueryLoggingListener.setLogLevel(SLF4JLogLevel.INFO);
+        SLF4JQueryLoggingListener commonsQueryLoggingListener= new SLF4JQueryLoggingListener();
+        commonsQueryLoggingListener.setLogLevel(SLF4JLogLevel.INFO);
 
         // use ChainListener to execute multiple listeners
-        //ChainListener chainListener = new ChainListener();
-        //chainListener.addListener(commonsQueryLoggingListener);
+        ChainListener chainListener = new ChainListener();
+        chainListener.addListener(commonsQueryLoggingListener);
 
         // craete proxy datasource
-        //ProxyDataSource proxyDS = new ProxyDataSource();
-        //proxyDS.setDataSource(dataSource);
-        //proxyDS.setListener(chainListener);
-        //proxyDS.setDataSourceName("Jpa2CertDS");
+        ProxyDataSource proxyDS = new ProxyDataSource();
+        proxyDS.setDataSource(dataSource);
+        proxyDS.setListener(chainListener);
+        proxyDS.setDataSourceName("Jpa2CertDS");
 
 
         Properties emfProps = new Properties();
-        emfProps.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, dataSource);
+        emfProps.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, proxyDS);
         emfProps.put(PersistenceUnitProperties.DDL_GENERATION, PersistenceUnitProperties.DROP_AND_CREATE);
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("CompanyPU", emfProps);
         EntityManager em = emf.createEntityManager();
