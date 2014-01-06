@@ -42,7 +42,7 @@ public class JPATestUtils {
         Properties emfProps = new Properties();
         emfProps.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, proxyDS);
         emfProps.put(PersistenceUnitProperties.DDL_GENERATION, PersistenceUnitProperties.DROP_AND_CREATE);
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("CompanyPU", emfProps);
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Jpa2CertPU", emfProps);
         EntityManager em = emf.createEntityManager();
         return em;
     }

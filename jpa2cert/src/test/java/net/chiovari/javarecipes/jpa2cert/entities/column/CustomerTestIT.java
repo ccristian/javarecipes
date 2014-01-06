@@ -1,5 +1,6 @@
 package net.chiovari.javarecipes.jpa2cert.entities.column;
 
+import net.chiovari.javarecipes.jpa2cert.entities.AbstractJPATestUtils;
 import net.chiovari.javarecipes.jpa2cert.entities.JPATestUtils;
 import net.chiovari.javarecipes.jpa2cert.entities.colum.Customer;
 import org.junit.AfterClass;
@@ -19,19 +20,8 @@ import static org.junit.Assert.assertNull;
  * Created by cristianchiovari on 02/01/14.
  */
 
-public class CustomerTestIT {
+public class CustomerTestIT extends AbstractJPATestUtils{
 
-    static EntityManager em;
-
-    @BeforeClass
-    public static void oneTimeSetUp() {
-        em = JPATestUtils.createEntityManager();
-    }
-
-    @AfterClass
-    public static void oneTimeTearDown() {
-        em.close();
-    }
 
     //it will be rolled back because the customer vat is not filled and it is mandatory
     @Test(expected = RollbackException.class)
