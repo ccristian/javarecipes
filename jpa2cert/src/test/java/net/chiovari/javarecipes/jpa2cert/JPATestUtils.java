@@ -1,4 +1,4 @@
-package net.chiovari.javarecipes.jpa2cert.entities;
+package net.chiovari.javarecipes.jpa2cert;
 
 import net.ttddyy.dsproxy.listener.ChainListener;
 import net.ttddyy.dsproxy.listener.SLF4JLogLevel;

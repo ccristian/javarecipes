@@ -1,6 +1,6 @@
 package net.chiovari.javarecipes.jpa2cert.entities.temporal;
 
-import net.chiovari.javarecipes.jpa2cert.entities.JPATestUtils;
+import net.chiovari.javarecipes.jpa2cert.JPATestUtils;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

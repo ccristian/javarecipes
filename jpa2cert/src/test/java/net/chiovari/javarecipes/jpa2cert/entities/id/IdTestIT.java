@@ -1,13 +1,12 @@
 package net.chiovari.javarecipes.jpa2cert.entities.id;
 
-import net.chiovari.javarecipes.jpa2cert.entities.JPATestUtils;
+import net.chiovari.javarecipes.jpa2cert.JPATestUtils;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import javax.persistence.EntityManager;
-import java.util.Date;
 
 /**
  * Created by cristianchiovari on 04/01/14.

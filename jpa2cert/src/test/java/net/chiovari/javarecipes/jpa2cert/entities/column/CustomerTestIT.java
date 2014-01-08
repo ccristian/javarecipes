@@ -1,17 +1,12 @@
 package net.chiovari.javarecipes.jpa2cert.entities.column;
 
-import net.chiovari.javarecipes.jpa2cert.entities.AbstractJPATestUtils;
-import net.chiovari.javarecipes.jpa2cert.entities.JPATestUtils;
+import net.chiovari.javarecipes.jpa2cert.AbstractJPATestUtils;
 import net.chiovari.javarecipes.jpa2cert.entities.colum.Customer;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import javax.persistence.EntityManager;
 import javax.persistence.RollbackException;
 
 import java.math.BigDecimal;
-import java.sql.SQLIntegrityConstraintViolationException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;

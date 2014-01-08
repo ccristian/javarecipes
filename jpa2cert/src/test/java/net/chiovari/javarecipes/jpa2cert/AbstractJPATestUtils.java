@@ -1,4 +1,4 @@
-package net.chiovari.javarecipes.jpa2cert.entities;
+package net.chiovari.javarecipes.jpa2cert;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

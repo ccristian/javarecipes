@@ -10,6 +10,13 @@
         <class>net.chiovari.javarecipes.jpa2cert.entities.id.AnotherEntityWithIDSequence</class>
         <class>net.chiovari.javarecipes.jpa2cert.entities.id.EntityWithIdTableGen</class>
         <class>net.chiovari.javarecipes.jpa2cert.entities.id.AnotherEntityWithIdTableGen</class>
+        <class>net.chiovari.javarecipes.jpa2cert.relationship.one2one.Heart1</class>
+        <class>net.chiovari.javarecipes.jpa2cert.relationship.one2one.Human1</class>
+        <class>net.chiovari.javarecipes.jpa2cert.relationship.one2one.Heart2</class>
+        <class>net.chiovari.javarecipes.jpa2cert.relationship.one2one.Human2</class>
+        <class>net.chiovari.javarecipes.jpa2cert.relationship.one2one.Heart3</class>
+        <class>net.chiovari.javarecipes.jpa2cert.relationship.one2one.Human3</class>
+
         <properties>
             <!--property name="eclipselink.logging.level.sql" value="FINE"/>
             <property name="eclipselink.logging.parameters" value="true"/-->
