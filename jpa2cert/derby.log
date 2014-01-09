@@ -1,0 +1,14 @@
+Thu Jan 09 11:24:35 CET 2014 : Apache Derby Network Server - 10.10.1.1 - (1458268) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Thu Jan 09 11:24:36 CET 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0143-7688-39c6-000006d14fa0 
+on database directory memory:C:\Projects\netbeans\javarecipes\jpa2cert\jpamemdb with class loader sun.misc.Launcher$AppClassLoader@307b37df 
+Loaded from file:/C:/Users/chiovcr/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_40-b43
+user.dir=C:\Projects\netbeans\javarecipes\jpa2cert
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
