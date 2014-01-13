@@ -6,12 +6,17 @@
 
 package net.chiovari.javarecipes.jpa2cert.auction;
 
+import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+
 /**
  *
  * @author chiovcr
  */
 public interface Jpa2CertRunningSample {
-    
-    public void run(String persitenceUnit);
+
+    public void run();
+
+    public void setEm(EntityManager em);
     
 }

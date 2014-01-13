@@ -1,6 +1,6 @@
 package net.chiovari.javarecipes.jpa2cert.entities.id;
 
-import net.chiovari.javarecipes.jpa2cert.JPATestUtils;
+import net.chiovari.javarecipes.jpa2cert.utils.JPATestUtils;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;

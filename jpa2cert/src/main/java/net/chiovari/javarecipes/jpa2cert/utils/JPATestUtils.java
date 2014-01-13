@@ -1,4 +1,4 @@
-package net.chiovari.javarecipes.jpa2cert.relationship.one2one;
+package net.chiovari.javarecipes.jpa2cert.utils;
 
 import java.net.InetAddress;
 import net.chiovari.javarecipes.jpa2cert.*;
@@ -17,16 +17,10 @@ import org.apache.derby.drda.NetworkServerControl;
 
 public class JPATestUtils {
     
-    public static EntityManager createEntityManager() throws Exception{
+    public static EntityManager createEntityManager() {
         
-        NetworkServerControl server = new NetworkServerControl(InetAddress.getByName("localhost"), 
-                                   1527, 
-                                   "airavata", 
-                                   "airavata");
+
         
-        
-        java.io.PrintWriter consoleWriter = new java.io.PrintWriter(System.out, true);
-        server.start(consoleWriter);
 
         ClientDataSource dataSource = new ClientDataSource ();
         dataSource.setServerName ("localhost");
@@ -36,22 +30,22 @@ public class JPATestUtils {
         dataSource.setUser("App");
         dataSource.setPassword("App");
 
-        SLF4JQueryLoggingListener commonsQueryLoggingListener= new SLF4JQueryLoggingListener();
-        commonsQueryLoggingListener.setLogLevel(SLF4JLogLevel.INFO);
+        //SLF4JQueryLoggingListener commonsQueryLoggingListener= new SLF4JQueryLoggingListener();
+        //commonsQueryLoggingListener.setLogLevel(SLF4JLogLevel.INFO);
 
         // use ChainListener to execute multiple listeners
-        ChainListener chainListener = new ChainListener();
-        chainListener.addListener(commonsQueryLoggingListener);
+        //ChainListener chainListener = new ChainListener();
+        //chainListener.addListener(commonsQueryLoggingListener);
 
         // craete proxy datasource
-        ProxyDataSource proxyDS = new ProxyDataSource();
-        proxyDS.setDataSource(dataSource);
-        proxyDS.setListener(chainListener);
-        proxyDS.setDataSourceName("Jpa2CertDS");
+        //ProxyDataSource proxyDS = new ProxyDataSource();
+        //proxyDS.setDataSource(dataSource);
+        //proxyDS.setListener(chainListener);
+        //proxyDS.setDataSourceName("Jpa2CertDS");
 
 
         Properties emfProps = new Properties();
-        emfProps.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, proxyDS);
+        emfProps.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, dataSource);
         emfProps.put(PersistenceUnitProperties.DDL_GENERATION, PersistenceUnitProperties.DROP_AND_CREATE);
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("Jpa2CertPU", emfProps);
         EntityManager em = emf.createEntityManager();

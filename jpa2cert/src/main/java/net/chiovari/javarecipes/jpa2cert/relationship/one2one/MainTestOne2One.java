@@ -6,6 +6,8 @@
 
 package net.chiovari.javarecipes.jpa2cert.relationship.one2one;
 
+import net.chiovari.javarecipes.jpa2cert.utils.JPATestUtils;
+
 import javax.persistence.EntityManager;
 
 /**
@@ -16,7 +18,7 @@ public class MainTestOne2One {
 
     public static void main(String args[]) throws Exception{    
         
-        EntityManager em= JPATestUtils.createEntityManager();        
+        EntityManager em= JPATestUtils.createEntityManager();
         Human1 human = new Human1();
         human.setSex("Male");
         Heart1 heart = new Heart1();

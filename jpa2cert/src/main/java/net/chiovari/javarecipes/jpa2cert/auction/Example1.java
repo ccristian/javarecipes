@@ -6,6 +6,7 @@
 
 package net.chiovari.javarecipes.jpa2cert.auction;
 
+import javax.persistence.EntityManager;
 import java.lang.reflect.Proxy;
 
 /**
@@ -14,18 +15,30 @@ import java.lang.reflect.Proxy;
  */
 public class Example1 implements Jpa2CertRunningSample {
 
-    public void run(String persitenceUnit) {
-        System.out.println("CUCU");
-    }
-    
-    
-    public static void main(String[] args) {
-        Example1 example1 = new Example1();
-        Jpa2CertRunningSample proxied =(Jpa2CertRunningSample)Proxy
-                           .newProxyInstance(Example1.class.getClassLoader(),
-         example1.getClass().getInterfaces() ,new Jpa2CertSampleInvHandler(example1));
-         proxied.run(null);
+    private EntityManager em;
 
+    public EntityManager getEm() {
+        return em;
+    }
+
+    @Override
+    public void run() {
+
+        System.out.println("RUN!!!"+em);
+
+    }
+
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
+
+
+    
+    
+    public static void main(String args[]){
+
+        Jpa2CertRunningSample ex1 = (Jpa2CertRunningSample)Jpa2CertProxy.newInstance(new Example1());
+        ex1.run();
     }
     
     
